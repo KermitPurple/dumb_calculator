@@ -2,7 +2,7 @@
 
 OUT_FILENAME = 'dumb_calc.py'
 MIN_NUMBER = 0
-MAX_NUMBER = 1000
+MAX_NUMBER = 100
 OPERATIONS = ['+', '-', '*', '/']
 OPERATION_FNS = {
     '+': lambda a, b: a + b,
@@ -33,7 +33,6 @@ def write_calc():
                     except ZeroDivisionError:
                         result = 'Undefined'
                     file.write(f'if num1 == {num1} and op == {op!r} and num2 == {num2}:\n{TAB}print(\'{num1} {op} {num2} = {result}\')\n')
-        file.write(f'else:\n{TAB}print(\'Invalid arguments\')\n{TAB}sys.exit(1)')
 
 def main():
     '''Driver Code'''
